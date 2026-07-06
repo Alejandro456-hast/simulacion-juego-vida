@@ -13,7 +13,7 @@ Cada celda evalúa su estado actual y el de sus 8 vecinas para decidir su próxi
 *Nota visual:* El sistema incluye un rastreador de "edad celular", donde el color de la célula cambia según las generaciones que ha logrado sobrevivir.
 
 ## Interfaz del Proyecto
-![Captura de la Interfaz](img/captura_interfaz.png)
+![Captura de la Interfaz](simulacion-juego-vida.png)
 
 ## Instrucciones de Instalación
 1. Clonar este repositorio en tu máquina local.
