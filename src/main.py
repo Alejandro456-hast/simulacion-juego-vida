@@ -1,20 +1,18 @@
 import tkinter as tk
-from model import GameModel
-from view import GameView
-from controller import GameController
+from model import ModeloEpidemia
+from view import VistaEpidemia
+from controller import ControladorEpidemia
 
 def main():
-    # Parámetros por defecto
-    filas_iniciales = 30
-    cols_iniciales = 40
-    prob_inicial = 0.3
-
-    # Instanciar el framework MVC
-    root = tk.Tk()
+    filas = 45
+    columnas = 80
     
-    model = GameModel(filas_iniciales, cols_iniciales, prob_inicial)
-    view = GameView(root, filas_iniciales, cols_iniciales)
-    controller = GameController(model, view)
+    root = tk.Tk()
+    root.resizable(False, False) 
+    
+    modelo = ModeloEpidemia(filas, columnas, prob_contagio=0.20, dias_recuperacion=12, prob_fallecimiento=0.06, prob_vuelo=0.005)
+    vista = VistaEpidemia(root, filas, columnas)
+    controlador = ControladorEpidemia(modelo, vista)
     
     root.mainloop()
 
