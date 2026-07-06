@@ -61,8 +61,9 @@ class ModeloEpidemia:
     def toggle_cuarentena(self):
         self.cuarentena_activa = not self.cuarentena_activa
         if self.cuarentena_activa:
-            self.prob_contagio = self.prob_contagio_base * 0.20 # Reduce contagio al 20%
-            self.prob_vuelo = 0.0 # Cierra fronteras aéreas
+            # CUARENTENA ESTRICTA: Reduce el contagio al 2% de su valor base (Aplanamiento real)
+            self.prob_contagio = self.prob_contagio_base * 0.02 
+            self.prob_vuelo = 0.0 # Cierre total de fronteras aéreas
         else:
             self.prob_contagio = self.prob_contagio_base
             self.prob_vuelo = self.prob_vuelo_base

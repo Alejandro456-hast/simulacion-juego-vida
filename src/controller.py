@@ -21,6 +21,7 @@ class ControladorEpidemia:
 
         self.vista.btn_play.config(text="▶ INICIAR BROTE", state="normal", bg="#e11d48")
         self.vista.btn_cuarentena.config(text="🛡️ DECLARAR CUARENTENA", bg="#f59e0b", state="disabled")
+        self.vista.canvas_mapa.config(bg="#020617") # Restaurar color de océano normal
         
         try:
             self.modelo.prob_contagio_base = float(self.vista.ent_contagio.get())
@@ -37,8 +38,12 @@ class ControladorEpidemia:
         self.modelo.toggle_cuarentena()
         if self.modelo.cuarentena_activa:
             self.vista.btn_cuarentena.config(text="⚠️ LEVANTAR CUARENTENA", bg="#8b5cf6")
+            # Efecto visual: Océano color alerta roja
+            self.vista.canvas_mapa.config(bg="#3f0f15") 
         else:
             self.vista.btn_cuarentena.config(text="🛡️ DECLARAR CUARENTENA", bg="#f59e0b")
+            # Efecto visual: Restaurar océano
+            self.vista.canvas_mapa.config(bg="#020617")
 
     def exportar_csv(self):
         archivo = self.modelo.exportar_datos_csv()
