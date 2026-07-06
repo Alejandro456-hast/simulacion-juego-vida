@@ -1,0 +1,15 @@
+# =================================================================
+# REQUISITOS DEL SISTEMA - SIMULADOR EPIDEMIOLÓGICO
+# =================================================================
+
+# Este proyecto ha sido desarrollado utilizando exclusivamente la
+# Biblioteca Estándar nativa de Python 3.x para garantizar su
+# portabilidad y ejecución inmediata.
+#
+# NO se requieren instalaciones de paquetes de terceros mediante pip.
+
+# Librerías nativas utilizadas en la arquitectura:
+# - tkinter  : Renderizado de la Interfaz Gráfica (GUI), mapas y gráficas.
+# - random   : Motor estocástico para probabilidades y eventos.
+# - csv      : Persistencia y exportación de datos poblacionales.
+# - datetime : Etiquetado temporal para los reportes generados.
